@@ -1,8 +1,9 @@
 .pull-right{float: right}
 
 img.carouselImage {
-width: 1000px;
-height: 510px !important;
+	margin-top:20px;
+	width: 1000px;
+	height: 510px !important;
 }
 
 div.Top3Title {

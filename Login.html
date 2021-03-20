@@ -3,39 +3,52 @@
 <html>
 <head>
 	<title>Sign in to Unsplash</title>
+	<link rel="stylesheet" title="default" href="css/style1.css">
 </head>
 <header>
 
 	<nav class = "top">
 
-		<a href="index.html"><span style="color:#C40000;margin:0px" class=" glyphicon glyphicon-home redColor">Unsplash</a>
+		<a href="index.html" class="logo">Unsplash</a>
+		<span style="font-style:italic;">
+			Bring Beautiful Artworks Home
+		</span>
+		<span class="pull-right">
+
+            <a href="Register.html">Sign up</a>
+        </span>
 		
 	</nav>
 </header>
 <body>
-	<div class="login_acount_text">Please enter your username and password</div>
+	<!-- <div class="login_acount_text">Please enter your username and password</div> -->
+
 	<form method="POST" name="SignIn">
-		<label>
-			Username:<input id="name" type="text" placeholder="username">
-		</label>
-		<br>
-		<label>
-			Password: <input id="password" type="password" placeholder="password">
-		</label>
-		<!-- <div class="loginInput">
-			<input id="name" type="text" placeholder="username">
-		</div>
-		
-		<div class="loginInput">
-			<input id="password" type="password" placeholder="password">
-		</div> -->
+		<table class="loginTable" align="center">
+			<tr>
+				<td class="loginTableLeftTD">Username</td>
+			</tr>
+			<tr>	
+            	<td class="loginTableRightTD"><input id="name" name="name" placeholder="username" > </td>
+			</tr>
+			<tr>
+				<td class="loginTableLeftTD">Password</td>
+			</tr>
+			<tr>
+				<td class="loginTableRightTD"><input id="password" name="password" type="password"  placeholder="password" ></td>
+			</tr>
+			<tr>
+				<td colspan="2" class="loginButtonTD">
+					<a href="#nowhere"><button class="signInBtn">Sign in</button></a>
+				</td>
+			</tr>
+		</table>
 	</form>
-	
-	<div style="margin-top:20px">
-        <button class="btn btn-block redButton" type="submit">Sign in</button>
-    </div>
-    <a href="Register.html">
-    	Sign up
-    </a>
+	<div class="SignUpEntry">
+		<span>New to Unsplash?</span>
+		<a href="Register.html">
+			Sign up
+		</a>
+	</div>
 </body>
 </html>

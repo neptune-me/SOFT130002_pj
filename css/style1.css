@@ -1,4 +1,39 @@
+nav.top {
+	/* padding-top: 3px; */
+	padding-bottom: 5px;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #e7e7e7;
+	/* width: 15px; */
+}
+
+nav.top a.logo {
+	color:dimgray;
+	font-weight: bold;
+	margin: 0px 10px 0px 10px;
+}
+
+nav.top a {
+	color: #999;
+	margin: 0px 10px 0px 10px;
+}
+
+
+nav.top span {
+	color: #999;
+	margin: 0px 10px 0px 10px;
+}
+
+a {
+	/* color: #999; */
+	text-decoration:none
+}
+
 .pull-right{float: right}
+
+body {
+	font-family: arial;
+}
 
 img.carouselImage {
 	margin-top:20px;
@@ -39,20 +74,19 @@ height: 150px;
 }
 
 div.EachPicture span.pictureTitle {
-font-size: 8px;
-color: #FF003A;
+font-size: 15px;
+font-weight: bold;
+color: #3a3839;
 display: block;
-/*padding-left: 16px;*/
-/*margin-top: 10px;*/
 text-align: center;
+margin-top: 15px;
 }
 
 div.EachPicture span.pictureArtist {
-font-size: 8px;
-color: #FF003A;
+font-size: 10px;
+color: #616060;
 display: block;
 /*padding-left: 16px;*/
-margin-top: 10px;
 text-align: center;
 }
 
@@ -129,26 +163,26 @@ button.addCartButton {
 	font-size: 16px;
 	/* 	font-weight:700; */
 	color: white;
-	font-family: arial;
+
 }
 
 div.Info div.Info_other {
     display: block;
     border:1px solid slategray;
-    border-radius: 5px;
+    border-radius: 5px; /*圆角边框*/
     background-color: rgb(216, 214, 214);
-    font-family: arial;
+
     font-size: 13px;
 }
 
 
 div.Info div.Info_Price {
     margin:20px auto;
-    font-family: arial;
+
 }
 
 div.Info span.PriceUnit {
-	font-family: Arial;
+
 	font-size: 18px;
 	color: #C40000;
 	/*     vertical-align: top; */
@@ -156,7 +190,58 @@ div.Info span.PriceUnit {
 
 div.Info span.PriceValue {
     color: #c40000;
-	font-family: Arial;
+
 	font-size: 30px;
 	font-weight: bold;
+}
+/*Login.html*/
+table.loginTable, table.registerTable {
+	color: #3C3C3C;
+	font-size: 16px;
+	table-layout: fixed;
+	margin-top: 50px;
+}
+div.login_acount_text {
+	margin-top:20px;
+}
+
+input {
+	width: 275px;
+	border: 1.5px solid;
+	border-radius: 5px;
+	height: 30px;
+	margin: 1px;
+	outline:none;
+}
+
+table.loginTable td {
+	padding: 8px 20px;
+}
+
+table.registerTable td {
+	padding: 8px 20px;
+}
+
+td.loginTableLeftTD {
+
+	font-size: 10px;
+	color:black;
+	
+}
+
+button.signInBtn {
+	margin-top: 10px;
+	background-color: rgb(7, 7, 7);
+	border: none;
+	height: 30px;
+	width: 280px;
+	color: floralwhite;
+}
+
+div.SignUpEntry {
+
+	font-size: 12px;
+	margin-top: 10px;
+	text-align: center;
+
 }

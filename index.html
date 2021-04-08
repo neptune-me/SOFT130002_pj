@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="IE=Edge, chrome=1">
+	<meta http-equiv="Page-Enter" content="RevealTrans(duration=5,Transitionv=11)">
+	<link rel="stylesheet" href="iconfont/css/demo.css">
+	<link rel="stylesheet" href="iconfont/css/iconfont.css">
 	<link rel="stylesheet" title="default" href="css/style1.css">
 </head>
 
-<header>
-
-	<nav class = "top">
-
-		<a href="index.html" class="logo">Unsplash</a>
-		<span style="font-style:italic;">
-			Bring Beautiful Artworks Home
-		</span>
-		<span class="pull-right">
-            <a href="index.html">Home</a>
-            <a href="search.html">Search</a>
-            <a href="Login.html">Sign in</a>
-            <a href="Register.html">Sign up</a>
-        </span>
-	</nav>
-
-</header>
-<body>
-	<div id = "carousel-of-picture">
-		<div id="carousel-inner" align="center">
-			
-			<img class="carouselImage" src="img/37.jpg">
-			
-		</div>
-	</div>
-	<div id="homepageTop3Pictures">
-		<!-- <div class="left-mark"> -->
-			<div class="Top3Title">
-				<span>Most visited</span>
+<div class="container">
+	<header>
+		<!-- <nav class="top"> -->
+		<div class="wrapper">
+			<div class="logo">
+				<a href="index.html" class="logo">Unsplash</a>
+				<span style="font-style:italic;">
+					Bring Beautiful Artworks Home
+				</span>
 			</div>
+			<nav>
+				<ul class="clearfix">
+					<li class="nav-item"><a href="Register.html">Sign up</a></li>
+					<li class="nav-item"><a href="Login.html">Sign in</a></li>
+					<li class="nav-item"><a href="search.html">Search</a></li>
+					<li class="nav-item">
+						<a href="index.html"><span>Home</span></a>
+					</li>
+
+
+
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<body>
+		<div class="viewport">
+			<input type="radio" name="slider" id="pic1" checked>
+			<input type="radio" name="slider" id="pic2">
+			<input type="radio" name="slider" id="pic3">
+			<div class="wrap">
+				<a href="PictureDetail.html"><img src="img/lunbo/37.jpg" alt=""></a>
+				<img src="img/lunbo/35.jpg" alt="">
+				<img src="img/lunbo/63.jpg" alt="">
+			</div>
+			<div class="page">
+				<label for="pic1"></label>
+				<label for="pic2"></label>
+				<label for="pic3"></label>
+			</div>
+			<div class="arrow left">
+				<!--左箭头-->
+				<label for="pic1"></label>
+				<label for="pic2"></label>
+				<label for="pic3"></label>
+			</div>
+			<div class="arrow right">
+				<!--左箭头-->
+				<label for="pic1"></label>
+				<label for="pic2"></label>
+				<label for="pic3"></label>
+			</div>
+		</div>
+
+		<div class="Top3Title">
+			<span>Most visited</span>
+		</div>
+
+		<div class="homepageTop3Pictures">
+			<!-- <div class="left-mark"> -->
 			<div class="EachPicture" align="center">
 				<a href="PictureDetail.html">
 					<img width="100px" src="img/391.jpg">
@@ -44,13 +81,13 @@
 					<span class="pictureTitle">
 						Doni Tondo
 					</span>
-					<br>
 					<span class="pictureArtist">
 						Michelangelo
 					</span>
-					<br>
 					<span class="pictureDescription">
-						The Doni Tondo features the Christian Holy family along with John the Baptist in the foreground and contains five ambiguous nude male figures in the background. 
+						The Doni Tondo features the Christian Holy family along with John the Baptist in the foreground
+						and
+						contains five ambiguous nude male figures in the background.
 					</span>
 				</a>
 			</div>
@@ -64,19 +101,15 @@
 					<span class="pictureTitle">
 						Alba Madonna
 					</span>
-					<br>
-
 					<span class="pictureArtist">
 						Raphael
 					</span>
-					<br>
-					
 					<span class="pictureDescription">
-						The three figures are grouped to the left in the round design, but the outstretched arm of the Madonna and the billowing material of her cloak balance the image.
+						The three figures are grouped to the left in the round design, but the outstretched arm of the
+						Madonna and the billowing material of her cloak balance the image.
 					</span>
 				</a>
 			</div>
-
 
 			<div class="EachPicture" align="center">
 				<a href="PictureDetail.html">
@@ -87,25 +120,30 @@
 					<span class="pictureTitle">
 						Madonna of the Chair
 					</span>
-					<br>
-
 					<span class="pictureArtist">
 						Raphael
 					</span>
-					<br>
-					
 					<span class="pictureDescription">
-						The warmer colors seem to suggest the influence of Titian and Raphael's rival Sebastiano del Piombo.
+						The warmer colors seem to suggest the influence of Titian and Raphael's rival Sebastiano del
+						Piombo.
 					</span>
 				</a>
-			</div>	
-	</div>
-	<div id="footer" class="footer">
+			</div>
+		</div>
+
+		<!-- <div id="footer" class="footer">
+			<div id="copyright" class="copyright">
+				<span class=>Copyright</span>
+			</div>
+		</div> -->
+
+
+	</body>
+	<footer class="footer">
 		<div id="copyright" class="copyright">
 			<span class=>Copyright</span>
 		</div>
-	</div>
+	</footer>
 </div>
-</body>
 
 </html>

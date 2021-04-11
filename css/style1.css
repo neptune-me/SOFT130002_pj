@@ -66,8 +66,6 @@ i {
 }
 
 header .wrapper {
-	/* margin-top: -8px; */
-	/* padding-bottom: 5px; */
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
 	border-bottom-color: #e7e7e7;
@@ -80,28 +78,6 @@ div.logo {
 	float: left;
 	font-size: 14px;
 }
-
-/* ul.clearfix {
-	display: flex;
-	justify-content: right;
-} */
-
-/* nav.top a.logo {
-	color: dimgray;
-	font-family: mango;
-	font-weight: lighter;
-	font-size: 16px;
-	margin: 0px 10px 0px 10px;
-}
-
-nav.top a {
-	color: #999;
-	margin: 0px 10px 0px 10px;
-}
-
-nav.top a:hover {
-	color: #C40000;
-} */
 
 header a.logo {
 	color: dimgray;
@@ -120,10 +96,57 @@ header a:hover {
 	color: #C40000;
 }
 
-/* nav.top span {
-	color: #999;
-	margin: 0px 10px 0px 10px;
-} */
+header div.smallSearchDiv {
+	margin: 0px 20px;
+	height: 30px;
+	display: flex;
+	border: 1px solid;
+	border-radius: 5px;
+	width: 250px;
+	background-color: whitesmoke;
+}
+
+header form {
+	margin-left: 15%;
+}
+
+header input {
+	width: calc(100% - 50px);
+	border: 1px transparent;
+	outline: none;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+header button {
+	/* display: inline-block; */
+	width: 50px;
+	text-align: center;
+	border: 1px transparent;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: dimgray;
+}
+
+header button svg {
+	color: white;
+	font-weight: bold;
+	height: 25px;
+}
+
+header {
+	padding: 10px 0px;
+	margin-bottom: 10px;
+}
+
+.flex {
+	display: flex;
+}
+
+.wrapper {
+	flex-wrap: nowrap;
+	align-items: center;
+}
 
 nav li.nav-item {
 	color: #999;
@@ -625,7 +648,8 @@ div.line {
 	border: solid 1px #ededf0;
 	border-radius: 5px;
 	overflow: hidden;
-	padding-bottom: 20px;
+	padding: 0px 20px 10px;
+	/* padding-bottom: 20px; */
 	vertical-align: top;
 	/* width: 100%; */
 	width: 33%;
@@ -659,9 +683,13 @@ div.buttons {
 .refinements button {
 	width: 30%;
 	border: 1px solid gray;
+	border-radius: 5px;
 	font-size: 20px;
+	font-family: sofia-pro;
+	text-align: center;
 	/* display: block; */
 	margin: 10px 10px;
+	padding: 1pxf;
 }
 
 div.searchResultDiv {

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections</title>
+    <link rel="stylesheet" title="default" href="css/style1.css">
+
+</head>
+
+<style>
+    nav {
+        padding-bottom: 12px;
+    }
+
+    header div.smallSearchDiv {
+        margin: 0px 20px;
+        height: 30px;
+        display: flex;
+        border: 1px solid;
+        border-radius: 5px;
+        width: 300px;
+        background-color: whitesmoke;
+    }
+
+    header form {
+        margin-left: 15%;
+    }
+
+
+    header input {
+        width: calc(100% - 50px);
+        border: 1px transparent;
+        outline: none;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+
+    header button {
+        /* display: inline-block; */
+        width: 50px;
+        text-align: center;
+        border: 1px transparent;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: dimgray;
+    }
+
+    header button svg {
+        color: white;
+        font-weight: bold;
+        height: 25px;
+    }
+
+    header {
+        padding: 10px 0px;
+        margin-bottom: 10px;
+    }
+
+    .flex {
+        display: flex;
+    }
+
+    .wrapper {
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    /* 
+    @media screen and (min-width: 768px) {
+        .header__search-container {
+            order: 2;
+            width: 842px;
+            margin-right: 40px;
+            margin-top: 0;
+            border-width: 3px;
+            margin-top: 8px;
+        }
+    }
+
+    .header__search-container {
+        border-bottom: 2px solid #303538;
+        align-self: flex-start;
+        width: 100%;
+        order: 3;
+    }
+
+    .header__search-container {
+        order: 2;
+        width: 842px;
+        margin-right: 40px;
+        margin-top: 0;
+        border-width: 3px;
+        margin-top: 8px;
+    }
+
+    .site-search-bar__auto-suggest-field {
+        flex-grow: 1;
+        position: relative;
+        align-items: center;
+    }
+
+    .site-search-bar__search-icon {
+        display: inline-block;
+        width: 38px;
+        height: 36px;
+        flex-shrink: 0;
+        position: relative;
+        left: -6px;
+    }
+
+    .site-search-bar__search-input[type=search] {
+        color: #303538;
+        margin-bottom: 0;
+        outline: 0;
+        flex-grow: 1;
+        font-size: 16px;
+        width: calc(100% - 50px);
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border: none;
+        box-shadow: none;
+        position: relative;
+        top: 2px;
+        background: 0 0;
+        padding: 0 5px;
+
+    } */
+</style>
+
+<header>
+    <!-- <nav class="top"> -->
+    <div class="wrapper flex">
+        <div class="logo">
+            <a href="index.html" class="logo">Unsplash</a>
+            <span style="font-style:italic;">
+                Bring Beautiful Artworks Home
+            </span>
+        </div>
+        <form action="Search.html" class="header__search-container">
+            <div class="smallSearchDiv">
+                <input name="keyword" type="text" placeholder="Search artworks">
+                <button type="submit" class="searchButton">
+                    <svg t="1618129737541" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="3017">
+                        <path
+                            d="M192 448c0-141.152 114.848-256 256-256s256 114.848 256 256-114.848 256-256 256-256-114.848-256-256z m710.624 409.376l-206.88-206.88A318.784 318.784 0 0 0 768 448c0-176.736-143.264-320-320-320S128 271.264 128 448s143.264 320 320 320a318.784 318.784 0 0 0 202.496-72.256l206.88 206.88 45.248-45.248z"
+                            fill="#ffffff" p-id="3018"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+        <nav>
+            <ul class="clearfix">
+                <li class="nav-item"><a href="Register.html">Sign up</a></li>
+                <li class="nav-item"><a href="Login.html">Sign in</a></li>
+                <li class="nav-item"><a href="search.html">Search</a></li>
+                <li class="nav-item">
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <div class="site_width">
+        <div>
+            <div class="cart-page_header">
+                <div class="cart-page_header-section">
+                    <h4 class="cart-page__title sp-h4">Your Cart</h4>
+                </div>
+                <div class="cart-page_header-welcome">
+                    <h5>Welcome,ljx</h5>
+                </div>
+            </div>
+
+            <div class="cart-page_wrapper">
+                <div class="cart-page_product-list">
+                    <div class="cart-page_product-row">
+                        <a href="PictureDetail.html" class="product-row_image">
+                            <img src="img/37.jpg">
+                        </a>
+                        <div class="product-row_content">
+                            <div class="product-row_meta">
+                                <a href="PictureDetail.html" class="product-row_meta-title">
+                                    Monalisa
+                                </a>
+                            </div>
+                            <div class="product-row_desc">
+                                The three figures are grouped to the left in the round design, but the outstretched arm
+                                of
+                                the
+                                Madonna and the billowing material of her cloak balance the image.
+                            </div>
+                            <div class="product-row_tally">
+                                <span class="product-row_item-total sp-subhead">
+                                    $9
+                                </span>
+                                <button
+                                    class="sp-button product-row_remove-button sp-button--ghost sp-button--mini sp-button--teal-text"
+                                    data-cypress="remove-from-cart">
+                                    <span class="sp-button_text">
+                                        Remove
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cart-page_product-row">
+                        <a href="PictureDetail.html" class="product-row_image">
+                            <img src="img/37.jpg">
+                        </a>
+                        <div class="product-row_content">
+                            <div class="product-row_meta">
+                                <a href="PictureDetail.html" class="product-row_meta-title">
+                                    Monalisa
+                                </a>
+                            </div>
+                            <div class="product-row_desc">
+                                The three figures are grouped to the left in the round design, but the outstretched arm
+                                of
+                                the
+                                Madonna and the billowing material of her cloak balance the image.
+                            </div>
+                            <div class="product-row_tally">
+                                <span class="product-row_item-total sp-subhead">
+                                    $9
+                                </span>
+                                <button
+                                    class="sp-button product-row_remove-button sp-button--ghost sp-button--mini sp-button--teal-text"
+                                    data-cypress="remove-from-cart">
+                                    <span class="sp-button_text">
+                                        Remove
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="cart-page_product-row">
+                        <a href="PictureDetail.html" class="product-row_image">
+                            <img src="img/37.jpg">
+                        </a>
+                        <div class="product-row_content">
+                            <div class="product-row_meta">
+                                <a href="PictureDetail.html" class="product-row_meta-title">
+                                    Monalisa
+                                </a>
+                            </div>
+                            <div class="product-row_desc">
+                                The three figures are grouped to the left in the round design, but the outstretched arm
+                                of
+                                the
+                                Madonna and the billowing material of her cloak balance the image.
+                            </div>
+                            <div class="product-row_tally">
+                                <span class="product-row_item-total sp-subhead">
+                                    $9
+                                </span>
+                                <button
+                                    class="sp-button product-row_remove-button sp-button--ghost sp-button--mini sp-button--teal-text"
+                                    data-cypress="remove-from-cart">
+                                    <span class="sp-button_text">
+                                        Remove
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="personalInfo">
+                    <header>Personal Infomation</header>
+                    <div class="setlist">
+                        <span class="label">Username</span>
+                        <span class="text">ljx</span>
+                    </div>
+                    <div class="setlist">
+                        <span class="label">Email</span>
+                        <span class="text">1</span>
+                    </div>
+                    <div class="setlist">
+                        <span class="label">Sex</span>
+                        <span class="text">Female</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="pagination">
+        <ul class="pagination">
+            <li class="disable"><span>«</span></li>
+            <li><span class="active">1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">»</a></li>
+        </ul>
+    </div>
+
+
+</body>
+
+</html>

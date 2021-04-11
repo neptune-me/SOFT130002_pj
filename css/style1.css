@@ -3,6 +3,11 @@
 	src: url("../font/Mango.otf") format("truetype");
 }
 
+@font-face {
+	font-family: sofia-pro;
+	src: url("../font/Sofia/Sofia\ Pro\ Regular\ Az.otf") format("truetype");
+}
+
 @media (max-width: 600px) {
 	div.logo span {
 		display: none;
@@ -39,6 +44,11 @@
 	div.EachPicture {
 		width: auto !important;
 	}
+}
+
+button {
+	border: transparent;
+	background-color: white;
 }
 
 img {
@@ -138,9 +148,9 @@ ol, ul {
 }
 
 body {
-	font-family: arial;
+	font-family: sofia-pro;
 	line-height: 200%;
-	margin: 0px 8px;
+	margin: 0px 18px;
 	color: #999;
 }
 
@@ -473,6 +483,119 @@ div.searchDiv button {
 	font-weight: bold;
 }
 
+.cart-page_header {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-bottom: 24px;
+}
+
+.cart-page_header h4 {
+	font-size: 24px;
+}
+
+.cart-page_header-welcome {
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+.cart-page_wrapper {
+	align-items: flex-start;
+	display: flex;
+	flex-wrap: nowrap;
+	margin-bottom: 64px;
+}
+
+.cart-page_product-list {
+	padding-right: 24px;
+}
+
+.cart-page_product-row:first-child {
+	border-top: 1px solid #d5d5d8;
+}
+
+.cart-page_product-row {
+	display: flex;
+	align-items: flex-start;
+	padding: 24px 0;
+	border-bottom: 1px solid #d5d5d8;
+	position: relative;
+}
+
+.cart-page_product-row .product-row_image {
+	width: 100%;
+	max-width: 155px;
+	padding: 4px;
+	background-color: #fff;
+	border: 1px solid #ededf0;
+	border-radius: 3px;
+	box-shadow: 0 10px 5px -5px rgb(0 0 0 / 5%);
+	margin-right: 21px;
+	flex-shrink: 0;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.cart-page_product-row .product-row_content {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+.cart-page_product-row .product-row_meta {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0;
+	min-height: 0;
+	overflow: hidden;
+}
+
+.product-row_meta-title {
+	display: inline-block;
+	color: #303538;
+	font-weight: 700;
+	margin-right: 4px;
+}
+
+.product-row_desc {
+	width: 75%;
+}
+
+.cart-page_product-row .product-row_tally {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-self: center;
+	position: absolute;
+	bottom: 63px;
+	right: 0;
+}
+
+.product-row_item-total {
+	text-align: right;
+	margin-bottom: 8px;
+}
+
+.sp-subhead {
+	font-size: 18px;
+	color: black;
+	font-weight: bold;
+}
+
+.sp-button {
+	border-radius: 3px;
+	font-weight: 700;
+	box-sizing: border-box;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	transition: .25s;
+	color: #088178;
+	padding: 0;
+}
+
 div.line {
 	padding: 0 20px 0;
 	margin: 20px 0;
@@ -482,16 +605,30 @@ div.line {
 	text-align: center;
 }
 
-.refinements, .personalInfo {
+.refinements {
 	display: inline-block;
-	background-color: dimgray;
+	background-color: white;
+	box-shadow: 0 10px 5px -5px rgb(0 0 0 / 5%);
+	border: solid 1px #ededf0;
+	border-radius: 5px;
 	overflow: hidden;
-	padding-bottom: 200px;
-	/*超长的一栏欸*/
-	/* text-align: center;  */
+	padding-bottom: 20px;
 	vertical-align: top;
 	/* width: 100%; */
-	width: 265px;
+	width: 20%;
+}
+
+.personalInfo {
+	display: inline-block;
+	background-color: white;
+	box-shadow: 0 10px 5px -5px rgb(0 0 0 / 5%);
+	border: solid 1px #ededf0;
+	border-radius: 5px;
+	overflow: hidden;
+	padding-bottom: 20px;
+	vertical-align: top;
+	/* width: 100%; */
+	width: 33%;
 }
 
 section.fieldset {
@@ -500,7 +637,7 @@ section.fieldset {
 }
 
 section.fieldset header, div.personalInfo header {
-	color: white;
+	color: black;
 	font-size: 20px;
 	margin-top: 10px;
 }
@@ -510,7 +647,7 @@ input[type=radio]:not(:checked)+label {
 }
 
 .refinements_radiobutton label {
-	color: #fff;
+	color: black;
 	font-size: .875rem;
 }
 
@@ -526,15 +663,6 @@ div.buttons {
 	/* display: block; */
 	margin: 10px 10px;
 }
-
-/* .refinements_form .refinements_radiobutton input[type=radio]+label:before {
-    display: inline-block;
-    content: " ";
-    vertical-align: top;
-    width: 19px;
-    height: 19px;
-    margin: 1px 10px 1px 1px;
-} */
 
 div.searchResultDiv {
 	/* max-width: 1013px; */
@@ -659,6 +787,7 @@ div.setlist {
 	margin-left: 4px;
 	/* border-bottom: 3px; */
 	font-size: 18px;
+	font-weight: bold;
 	color: black;
 	text-align: left;
 }

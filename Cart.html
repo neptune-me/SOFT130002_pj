@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Collections</title>
     <link rel="stylesheet" title="default" href="css/style1.css">
-
+    <script src="js/Cart.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jq.js"></script>
+    <script src="js/history.js"></script>
 </head>
 
 <style>
@@ -49,10 +51,12 @@
                 </li>
             </ul>
         </nav>
+        
     </div>
 </header>
 
 <body>
+
     <div class="site_width">
         <div>
             <div class="cart-page_header">
@@ -65,7 +69,7 @@
             </div>
 
             <div class="cart-page_wrapper">
-                <div class="cart-page_product-list">
+                <div class="cart-page_product-list" id="cart-page_product-list">
                     <div class="cart-page_product-row">
                         <a href="PictureDetail.html" class="product-row_image">
                             <img src="img/37.jpg">
@@ -88,6 +92,7 @@
                                 </span>
                                 <button
                                     class="sp-button product-row_remove-button sp-button--ghost sp-button--mini sp-button--teal-text"
+                                    onclick="remove_and_check(this)"
                                     data-cypress="remove-from-cart">
                                     <span class="sp-button_text">
                                         Remove
@@ -119,6 +124,7 @@
                                 </span>
                                 <button
                                     class="sp-button product-row_remove-button sp-button--ghost sp-button--mini sp-button--teal-text"
+                                    onclick="remove_and_check(this)"
                                     data-cypress="remove-from-cart">
                                     <span class="sp-button_text">
                                         Remove
@@ -150,6 +156,7 @@
                                 </span>
                                 <button
                                     class="sp-button product-row_remove-button sp-button--ghost sp-button--mini sp-button--teal-text"
+                                    onclick="remove_and_check(this)"
                                     data-cypress="remove-from-cart">
                                     <span class="sp-button_text">
                                         Remove
@@ -179,7 +186,7 @@
 
         </div>
     </div>
-    <div class="pagination">
+    <div class="pagination" id="pagination">
         <ul class="pagination">
             <li class="disable"><span>«</span></li>
             <li><span class="active">1</span></li>
@@ -192,8 +199,6 @@
             <li><a href="#">»</a></li>
         </ul>
     </div>
-
-
 </body>
 
 </html>

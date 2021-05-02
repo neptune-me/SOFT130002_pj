@@ -2,54 +2,39 @@
 <html>
 
 <head>
-	<title>Sign in to Unsplash</title>
+	<title>Sign in</title>
 	<link rel="stylesheet" title="default" href="css/style1.css">
+	<script src="js/jq.js"></script>
+	<script src="js/history.js"></script>
 </head>
 
-<header>
-	<nav class="top">
-		<a href="index.html" class="logo">Unsplash</a>
-		<span style="font-style:italic;">
-			Bring Beautiful Artworks Home
-		</span>
-		<span class="pull-right">
-			<a href="Register.html">Sign up</a>
-		</span>
-	</nav>
-</header>
 
 <body>
-	<!-- <div class="login_acount_text">Please enter your username and password</div> -->
-	<form method="POST" name="SignIn">
-		<table class="loginTable" align="center">
-			<tr>
-				<td class="loginTableLeftTD">Username</td>
-			</tr>
-			<tr>
-				<td class="loginTableRightTD"><input id="name" name="name" placeholder="username"> </td>
-			</tr>
-			<tr>
-				<td class="loginTableLeftTD">Password</td>
-			</tr>
-			<tr>
-				<td class="loginTableRightTD"><input id="password" name="password" type="password"
-						placeholder="password"></td>
-			</tr>
-			<tr>
-				<td colspan="2" class="loginButtonTD">
-					<a href="#nowhere"><button class="signInBtn">Sign in</button></a>
-				</td>
-			</tr>
-		</table>
-	</form>
+	<header>
+		<nav class="top">
+			<a href="index.html" class="logo">Unsplash</a>
+			<span style="font-style:italic;">
+				Bring Beautiful Artworks Home
+			</span>
+			<span class="pull-right">
+				<a href="Register.html">Sign up</a>
+			</span>
+		</nav>
+	</header>
 
-	<div class="SignUpEntry">
-		<span>New to Unsplash? </span>
-		<a href="Register.html">
-			Sign up
-		</a>
+	<div class="container">
+		<h1 class="label">User Login</h1>
+		<form class="login_form" method="post" name="form" onsubmit="return validated()">
+			<div class="font">Username</div>
+			<input autocomplete="off" type="text" name="email">
+			<div id="email_error">Please fill up your Username</div>
+			<div class="font font2">Password</div>
+			<input type="password" name="password">
+			<div id="pass_error">Please fill up your Password</div>
+			<button type="submit">Login</button>
+		</form>
 	</div>
-
+	<script src="js/valid.js"></script>
 </body>
 
 </html>

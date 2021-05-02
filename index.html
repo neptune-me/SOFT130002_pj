@@ -9,6 +9,11 @@
 	<link rel="stylesheet" href="iconfont/css/demo.css">
 	<link rel="stylesheet" href="iconfont/css/iconfont.css">
 	<link rel="stylesheet" title="default" href="css/style1.css">
+	<script src="js/jq.js"></script>
+	<!-- <script src="js/history.js"></script> -->
+	<script src="js/carousel.js"></script>
+	<script src="js/history.js"></script>
+
 </head>
 <style>
 	nav {
@@ -17,10 +22,10 @@
 </style>
 
 
-<div class="container">
+<div>
 	<header>
 		<!-- <nav class="top"> -->
-		<div class="wrapper flex">
+		<div class="wrapper flex" id="wrapper">
 			<div class="logo">
 				<a href="index.html" class="logo">Unsplash</a>
 				<span style="font-style:italic;">
@@ -43,12 +48,13 @@
 			</form>
 			<nav>
 				<ul class="clearfix">
-					<li class="nav-item"><a href="Register.html">Sign up</a></li>
-					<li class="nav-item"><a href="Login.html">Sign in</a></li>
-					<li class="nav-item"><a href="search.html">Search</a></li>
 					<li class="nav-item">
 						<a href="index.html"><span>Home</span></a>
 					</li>
+					<li class="nav-item"><a href="search.html">Search</a></li>
+					<li class="nav-item"><a href="Login.html">Sign in</a></li>
+					<li class="nav-item"><a href="Register.html">Sign up</a></li>
+					
 				</ul>
 			</nav>
 		</div>
@@ -57,31 +63,18 @@
 
 	<body>
 		<div class="viewport">
-			<input type="radio" name="slider" id="pic1" checked>
-			<input type="radio" name="slider" id="pic2">
-			<input type="radio" name="slider" id="pic3">
-			<div class="wrap">
-				<a href="PictureDetail.html"><img src="img/lunbo/37.jpg" alt=""></a>
-				<img src="img/lunbo/35.jpg" alt="">
-				<img src="img/lunbo/63.jpg" alt="">
-			</div>
-			<div class="page">
-				<label for="pic1"></label>
-				<label for="pic2"></label>
-				<label for="pic3"></label>
-			</div>
-			<div class="arrow left">
-				<!--左箭头-->
-				<label for="pic1"></label>
-				<label for="pic2"></label>
-				<label for="pic3"></label>
-			</div>
-			<div class="arrow right">
-				<!--左箭头-->
-				<label for="pic1"></label>
-				<label for="pic2"></label>
-				<label for="pic3"></label>
-			</div>
+			<ul class="navs" id="navs">
+				<li><a href="PictureDetail.html"><img src="img/lunbo/48.jpg"></img></a></li>
+				<li><a href="PictureDetail.html"><img src="img/lunbo/35.jpg"></img></a></li>
+				<li><a href="PictureDetail.html"><img src="img/lunbo/37.jpg"></img></a></li>
+				<li><a href="PictureDetail.html"><img src="img/lunbo/48.jpg"></img></a></li>
+				<li><a href="PictureDetail.html"><img src="img/lunbo/35.jpg"></img></a></li>
+			</ul>
+			<ul class="bots" id="bots">
+				<li class="bot active"></li>
+				<li class="bot"></li>
+				<li class="bot"></li>
+			</ul>
 		</div>
 
 		<div class="Top3Title">
@@ -154,7 +147,6 @@
 				<span class=>Copyright</span>
 			</div>
 		</div> -->
-
 
 	</body>
 	<footer class="footer">

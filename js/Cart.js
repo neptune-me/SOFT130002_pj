@@ -13,7 +13,6 @@
 // }
 function remove_and_check(button) {
 
-    console.log("enter");
     let node = button;
     while(node.className != "cart-page_product-row")
     {
@@ -38,3 +37,8 @@ function check_no_items() {
         pagination.remove()
     }
 }
+
+//点击加入购物车 加购按钮不可用 变成已收藏
+//function addCart() {
+
+// }

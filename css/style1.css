@@ -121,12 +121,7 @@ header input {
 }
 
 header button {
-	/* display: inline-block; */
-	width: 50px;
-	text-align: center;
-	border: 1px transparent;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px;
+	color: white;
 	background-color: dimgray;
 }
 
@@ -314,6 +309,10 @@ div.EachPicture span.pictureDescription {
 	/*padding-left: 16px;*/
 	margin-top: 5px;
 	text-align: center;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;
+	overflow: hidden;
 }
 
 footer.footer {
@@ -394,6 +393,19 @@ button.addCartButton {
 	padding: 2px;
 	/* 	font-weight:700; */
 	color: white;
+	display: none;
+}
+
+button.deleteButton {
+	border: 1px solid #C40000;
+	background-color: #C40000;
+	text-align: center;
+	line-height: 40px;
+	font-size: 16px;
+	padding: 2px;
+	/* 	font-weight:700; */
+	color: white;
+	display: none;
 }
 
 div.Info div.Info_other {
@@ -590,7 +602,7 @@ div.searchDiv button {
 	justify-content: flex-end;
 	align-self: center;
 	position: absolute;
-	bottom: 63px;
+	bottom: 45%;
 	right: 0;
 }
 
@@ -703,7 +715,7 @@ div.buttons {
 	padding: 1pxf;
 }
 
-div.searchResultDiv {
+div.search-result {
 	/* max-width: 1013px; */
 	display: inline-block;
 	vertical-align: top;
@@ -714,6 +726,42 @@ div.searchResultDiv {
 	min-height: 300px;
 	/* float: left; */
 }
+.search-result .result-header {
+	margin-bottom: 2rem;
+	font-size: 18px;
+	margin-left: 30px;
+    font-weight: bold;
+}
+  
+.search-result .result-header .records {
+	color: #3c4142;
+}
+  
+.search-result .result-header .result-actions {
+	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.search-result .result-header .result-actions .result-sorting {
+	display: flex;
+	align-items: center;
+}
+  
+.search-result .result-header .result-actions .result-sorting span {
+	flex-shrink: 0;
+	font-size: 0.8125rem;
+}
+  
+.search-result .result-header .result-actions .result-sorting select {
+	color: black;
+}
+
+.search-result .result-header .result-actions .result-sorting select option {
+	color: #3c4142;
+}
+  
 
 div.productUnit {
 	width: 250px;
@@ -725,6 +773,7 @@ div.productUnit {
 	float: left;
 	/*行间距回归正常*/
 	line-height: normal;
+	position:relative;
 }
 
 div.productUnit:hover {
@@ -733,7 +782,10 @@ div.productUnit:hover {
 }
 
 div.productUnit a.productLink {
-	display: inline-block;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	overflow: hidden;
 	font-size: 20px;
 	font-weight: bold;
 }
@@ -755,6 +807,7 @@ div.productInfo {
 	padding: 2px;
 }
 
+
 div.productInfo span.productDesc {
 	/* display: inline-block; */
 	/* height: 100px; */
@@ -769,15 +822,24 @@ div.productArtist {
 	/* vertical-align: bottom; */
 }
 
-div.pagination {
-	text-align: center;
+.productPrice {
+	position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-ul.pagination {
-	display: inline-block;
-	padding: 0;
-	margin: 20px;
+.productView {
+	position: absolute;
+    bottom: 0;
+    right: 0;
 }
+
+div.pagination {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+}
+
 
 ul.pagination .disable span {
 	cursor: not-allowed;
@@ -797,13 +859,12 @@ ul.pagination li {
 ul.pagination li a, ul.pagination li span {
 	color: #666;
 	font-size: 14px;
-	display: inline-block;
+	/* display: inline-block; */
 	padding: 0 12px;
-	height: 32px;
 	line-height: 32px;
 	margin-right: 6px;
 	cursor: pointer;
-	border-radius: 99px;
+	/* border-radius: 99px; */
 	transition: background-color .2s;
 }
 
@@ -812,7 +873,7 @@ ul span.active {
 	background: dimgray;
 }
 
-/*Collections.html*/
+/*Collections.html */
 
 div.setlist {
 	border-bottom: 1px dashed #CCCCCC;

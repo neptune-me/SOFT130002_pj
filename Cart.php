@@ -16,11 +16,11 @@ $pdo = connect();
         <div>
             <div class="cart-page_header">
                 <div class="cart-page_header-section">
-                    <h4 class="cart-page__title sp-h4">Your Cart</h4>
+                    <h4 class="cart-page__title sp-h4">Your Cart  <small>welcome, admin</small></h4>
                 </div>
-                <div class="cart-page_header-welcome">
+                <!-- <div class="cart-page_header-welcome">
                     <h5>Welcome, admin</h5>
-                </div>
+                </div> -->
             </div>
         <div class="cart-page_wrapper">
             <div class="cart-page_product-list" id="cart-page_product-list">
@@ -34,17 +34,20 @@ if ($result->rowCount() != 0) {
         //根据作品ID去作品表中读取详细信息
         $query1 = "select * from artworks where artworkID = {$row['artworkID']}";
         $row_detail = execute($pdo, $query1)->fetch();
-
+        
         $html = <<<A
         <div class="cart-page_product-row" id="artwork{$row['artworkID']}">
-            <a href="PictureDetail.php?id={$row['artworkID']}" class="product-row_image">
-                <img src="img/{$row['artworkID']}.jpg">
-            </a>
+                <a href="PictureDetail.php?id={$row['artworkID']}" class="product-row_image">
+                    <img src="img/{$row['artworkID']}.jpg">
+                </a>
             <div class="product-row_content">
                 <div class="product-row_meta">
                     <a href="PictureDetail.php?id={$row['artworkID']}" class="product-row_meta-title">
                         {$row_detail['title']}
                     </a>
+                </div>
+                <div class="product-row_time">
+                    Time of Released:{$row_detail['timeReleased']}
                 </div>
                 <div class="product-row_desc">
                     {$row_detail['description']}

@@ -524,6 +524,8 @@ div.searchDiv button {
 
 .cart-page_header h4 {
 	font-size: 24px;
+	color:black;
+	font-weight: bold;
 }
 
 .cart-page_header-welcome {
@@ -533,13 +535,14 @@ div.searchDiv button {
 
 .cart-page_wrapper {
 	align-items: flex-start;
+	justify-content: space-between;
 	display: flex;
 	flex-wrap: nowrap;
 	margin-bottom: 64px;
 }
 
 .cart-page_product-list {
-	width: 60%;
+	width: 65%;
 	padding-right: 24px;
 }
 
@@ -555,7 +558,7 @@ div.searchDiv button {
 	position: relative;
 }
 
-.cart-page_product-row .product-row_image {
+.product-row_image {
 	width: 100%;
 	max-width: 155px;
 	padding: 4px;
@@ -584,7 +587,9 @@ div.searchDiv button {
 	min-height: 0;
 	overflow: hidden;
 }
-
+.product-row_time {
+	color:sandybrown;
+}
 .product-row_meta-title {
 	display: inline-block;
 	color: #303538;
@@ -602,7 +607,7 @@ div.searchDiv button {
 	justify-content: flex-end;
 	align-self: center;
 	position: absolute;
-	bottom: 45%;
+	top:10%;
 	right: 0;
 }
 

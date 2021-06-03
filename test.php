@@ -9,23 +9,45 @@ include_once 'inc/header.inc.php';
 // $id = $_GET['id'];
 ?>
 
+<div class="cart-page_product-row" id="artwork{$row['artworkID']}">
+            <a href="PictureDetail.php?id={$row['artworkID']}" class="product-row_image">
+                <img src="img/{$row['artworkID']}.jpg">
+            </a>
+            <div class="product-row_time">
+                {$row_detail['timeRe']}
+            </div>
+            <div class="product-row_content">
+                <div class="product-row_meta">
+                    <a href="PictureDetail.php?id={$row['artworkID']}" class="product-row_meta-title">
+                        {$row_detail['title']}
+                    </a>
+                </div>
+                
+                <div class="product-row_desc">
+                    {$row_detail['description']}
+                </div>
+                <div class="product-row_tally">
+                    <span class="product-row_item-total sp-subhead">
+                        <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+                        50
+                    </span>
+                    
+                    <button
+                        type="button"
+                        class="sp-button product-row_remove-button sp-button--ghost sp-button--mini sp-button--teal-text"
+                        data-toggle="modal" data-target="#removeModal"
+                        data-id=1
 
-<!-- <div class="pagination">
-    <ul class="pagination">
-        <li class="disable"><span>«</span></li>
-        <li class="page active"><a href="#">1</a></li>
-        <li class="page" data-id=2><a href="#">2</a></li>
-        <li class="page"><a href="#">3</a></li>
-        <li class="page"><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">6</a></li>
-        <li><a href="#">7</a></li>
-        <li><a href="#">»</a></li>
-    </ul>
-</div> -->
-<link rel="stylesheet" href="css/pagination.css">
-<script src="js/jquery.pagination.js"></script>
-<div class="M-box"></div>
+                    >
+                        <span class="sp-button_text">
+                            Remove
+                        </span>
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+
 </body>
 <script>
 // $('.M-box').pagination({

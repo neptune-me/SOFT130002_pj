@@ -4,7 +4,7 @@ include_once '../inc/mysql.inc.php';
 $pdo = connect();
 
 //设置全局变量
-$limit = 12;
+$limit = 9;
 //获取要显示的页数
 // $page = get_page();
 // $start = get_start($page, $limit);
@@ -15,12 +15,15 @@ $sum = $result->fetchColumn(0);
 //总页数
 $page_sum = ceil($sum / $limit);
 
-$res = "";
-for($i = 1; $i <= $page_sum; $i ++) {
-    $temp = <<<A
-<li class="page"><a href="#">{$i}</a></li>
-A;
-    $res .= $temp;
-}
-echo $res;
+//$res = "";
+$res = array("page_sum"=>$page_sum, "res_sum"=>$sum);
+// $res = {"page_sum":$page_sum};
+
+// for($i = 1; $i <= $page_sum; $i ++) {
+//     $temp = <<<A
+// <li class="page"><a href="#">{$i}</a></li>
+// A;
+//     $res .= $temp;
+// }
+echo json_encode($res);
 ?>

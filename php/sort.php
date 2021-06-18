@@ -4,43 +4,43 @@ include_once '../inc/mysql.inc.php';
 $pdo = connect();
 
 //设置全局变量
-$limit = 12;
-//获取要显示的页数
-// $page = get_page();
-// $start = get_start($page, $limit);
+$limit = 9;
+// 获取要显示的页数
+$page = get_page();
+$start = get_start($page, $limit);
 //结果总数
 // $sum_query = "select COUNT(*) from artworks where title like '%{$_GET['keyword']}%'";
 // $result = execute($pdo, $sum_query);
 // $sum = $result->rowCount();
 
-// $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by view DESC limit {$start}, {$limit}";
-// if (isset($_GET['sort'])) { //默认按热度从高到低排序 如果选了排序为Price从高到低
-//     // foreach ($_GET['sort'] as $d) {
-//         if ($_GET['sort'] == "phtl") {
-//             $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by price DESC limit {$start}, {$limit}";
-            
-//         } else if ($_GET['sort'] == "plth"){
-//             $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by price ASC limit {$start}, {$limit}";
-//         } else if ($_GET['sort'] == "rlth") {
-//         $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by view ASC limit {$start}, {$limit}";
-//         }
-// }
-$query = "select * from artworks where title like '%{$_GET['keyword']}%' order by view DESC";
+$query = "select * from artworks where title like '%{$_GET['keyword']}%' order by view DESC limit {$start}, {$limit}";
 if (isset($_GET['sort'])) { //默认按热度从高到低排序 如果选了排序为Price从高到低
     // foreach ($_GET['sort'] as $d) {
         if ($_GET['sort'] == "phtl") {
-            $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by price DESC";
+            $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by price DESC limit {$start}, {$limit}";
             
         } else if ($_GET['sort'] == "plth"){
-            $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by price ASC";
+            $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by price ASC limit {$start}, {$limit}";
         } else if ($_GET['sort'] == "rlth") {
-        $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by view ASC";
+        $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by view ASC limit {$start}, {$limit}";
         }
 }
+// $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by view DESC";
+// if (isset($_GET['sort'])) { //默认按热度从高到低排序 如果选了排序为Price从高到低
+//     // foreach ($_GET['sort'] as $d) {
+//         if ($_GET['sort'] == "phtl") {
+//             $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by price DESC";
+            
+//         } else if ($_GET['sort'] == "plth"){
+//             $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by price ASC";
+//         } else if ($_GET['sort'] == "rlth") {
+//         $query = "select * from artworks where title like '%{$_GET['keyword']}%' order by view ASC";
+//         }
+// }
 
 $result = execute($pdo, $query);
 $res = "";
-//$res = array('html' => '', 'sum' => 0);
+// $res = array('artworkID' => '', 'sum' => 0, 'title' => '','artist'=>);
 
 //统计有多少条搜索结果、要分多少页
 

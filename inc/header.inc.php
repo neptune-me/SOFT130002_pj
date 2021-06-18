@@ -16,7 +16,7 @@
 	<!-- <script src="js/history.js"></script> -->
 	<script src="js/Cart.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-
+	<script src="js/nav.js"></script>
 </head>
 <style>
 	nav {
@@ -41,12 +41,23 @@
 			</form>
 			<nav>
 				<ul class="clearfix">
-					<li class="nav-item">
+					<!-- <li class="nav-item">
 						<a href="index.php"><span>Home</span></a>
+					</li> -->
+					<li class="nav-item"><a href="Login.php">Sign in</a></li>
+					<li class="nav-item"><a href="Register.php">Sign up</a></li>
+					<li class="nav-item dropdown hidden">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+							<span class="glyphicon glyphicon-user"></span>
+							<span class="username"></span>
+						</a>
+						<ul class="dropdown-menu">
+							<!-- <li>Your Cart</li> -->
+							<li><a href="Cart.php">Your Cart</a></li>
+							<li><a href="php/logout.php">Log out</a></li>
+							
+						</ul>
 					</li>
-					<li class="nav-item"><a href="Cart.php">Cart</a></li>
-					<li class="nav-item"><a href="Login.html">Sign in</a></li>
-					<li class="nav-item"><a href="Register.html">Sign up</a></li>
 					
 				</ul>
 			</nav>

@@ -12,7 +12,7 @@ $id = $_GET['id'];
 <?php
 include_once('inc/header.inc.php');
 ?>
-
+<script src="js/pic_detail.js"></script>
 <body>
 	<?php
 	//将artworkID为id的作品的详细信息从数据库中读取出
@@ -67,8 +67,6 @@ $html = <<<A
 	</div>
 A;
 	echo $html;
-	//检查用户登陆状况，未登录的用户禁用收藏
-
 	//检查用户收藏夹内是否存在该作品，如果收藏过，则显示已收藏；如果没收藏，则显示加入购物车的按钮
 	//用户默认为admin
 ?>
@@ -80,80 +78,8 @@ A;
 	</div> -->
 	<div class="buyDiv">
 		<button type="button" class="btn btn-default addCartButton" id="addCartButton"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>Add to Wish List</button>
-		<button type="button" class="btn btn-default deleteButton disabled" id="deleteButton" ><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Already in Cart</button>
+		<button type="button" class="btn btn-default deleteButton disabled hidden" id="deleteButton" ><span class="glyphicon glyphicon-star" aria-hidden="true"></span>Already in Cart</button>
 	</div>
-	<script>
-		//调用php 显示"加入购物车" 还是 "已添加"
-		//如果没添加过，那么点击加入购物车按钮 1.调用php检查是否收藏了 2.没收藏，添加进数据库 并且改变按钮状态
-		var addID;
-		$(document).ready(
-			function () {
-				addID = $('.ImgandInfo').data('id');
-				//alert(addID)
-				$.ajax( 
-                    {
-                        url: "php/addCart.php",
-                        data:{"id":addID, "action":"check"},
-                        type: "get",
-                        beforeSend:function()
-                        {
-                            //alert("正在处理")
-                            return true;
-                        },
-                        success:function(inCart)
-                        {
-                            
-                            // document.location.href='world_system_notice.php'
-                            if (inCart == "false") {
-								//alert(false)
-								$("#addCartButton").css("display","inline-block") 
-							} else if (inCart == "true") {
-								//alert(true)
-								$("#deleteButton").css("display","inline-block") 
-							} else {
-								alert(inCart)
-							}
-                        
-                        },
-                        error:function()
-                        {
-                            alert('请求出错');
-                        },
-                        complete:function()
-                        {
-                            // $('#tips').hide();
-                        }
-                    });
-            }
-		)
-		$(".addCartButton").click(function() {
-			$.ajax( 
-				{
-
-					url: "php/addCart.php",
-					data:{"id":addID, "action":"add"},
-					type: "get",
-					beforeSend:function()
-					{
-						return true;
-					},
-					success:function()
-					{
-						$("#addCartButton").css("display","none")
-						$("#deleteButton").css("display","inline-block") 
-					},
-					
-					error:function()
-					{
-						alert('请求出错');
-					},
-					complete:function()
-					{
-						// $('#tips').hide();
-					}
-				});
-		})
-	</script>
 </body>
 
 </html>

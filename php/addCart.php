@@ -3,9 +3,9 @@
 include_once '../inc/config.inc.php';
 include_once '../inc/mysql.inc.php';
 
-function check($id) {
+function check($id, $userID) {
     $pdo = connect();
-    $query = "select * from carts where artworkID = ${id} and userID = 1";
+    $query = "select * from carts where artworkID = ${id} and userID = ${userID}";
     $result = execute($pdo, $query);
     if ($result->rowCount() != 0) {
         echo "true";
@@ -14,19 +14,20 @@ function check($id) {
     }
 }
 
-function add($id) {
+function add($id, $userID) {
     $pdo = connect();
-    $sql = "insert into carts (userID, artworkID) values (1, {$id})";
+    $sql = "insert into carts (userID, artworkID) values ({$userID}, {$id})";
     execute($pdo, $sql);
 }
 
 
 $id = $_GET['id'];
+$userID = $_GET['userID'];
 $action = $_GET['action'];
 if ($action == "check") {
-    check($id);
+    check($id, $userID);
 } else if ($action == "add") {
-    add($id);
+    add($id, $userID);
 }
 
 

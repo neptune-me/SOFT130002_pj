@@ -31,7 +31,7 @@ include_once 'inc/header.inc.php';
 					//定界符
 $html = <<<A
 <div class="item">
-	<a href="PictureDetail.php?id={$row['artworkID']}"><img src="img/{$row['artworkID']}.jpg" alt="Los Angeles" style="width:100%;"></a>
+	<a href="PictureDetail.php?id={$row['artworkID']}"><img src="img/{$row['artworkID']}.jpg" alt="Los Angeles" style="width:100%;height:600px;"></a>
     <div class="carousel-caption">
         <h3>{$row['title']}</h3>
         <p>{$row['description']}</p>
